@@ -7,8 +7,9 @@ WORKDIR /home/jovyan/work
 # Copy requirements file
 COPY requirements.txt .
 
-# Install additional dependencies
-RUN pip install --no-cache-dir scikit-surprise
+# Install additional dependencies + Colab support
+RUN pip install --no-cache-dir scikit-surprise jupyter_http_over_ws && \
+    jupyter serverextension enable --py jupyter_http_over_ws
 
 # Copy project files
 COPY . .
