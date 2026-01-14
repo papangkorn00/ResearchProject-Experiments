@@ -1,0 +1,11 @@
+# Core Data Science
+pandas>=2.0.0
+numpy==1.26.4
+
+# Machine Learning & Recommender Systems
+scikit-surprise>=1.1.0
+scikit-learn>=1.3.0
+
+# Visualization
+matplotlib>=3.7.0
+seaborn>=0.12.0
