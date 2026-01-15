@@ -1,0 +1,12 @@
+services:
+  jupyter:
+    build: .
+    ports:
+      - "8888:8888"
+    volumes:
+      # Mount current directory for live editing
+      - .:/home/jovyan/work
+    environment:
+      - JUPYTER_ENABLE_LAB=yes
+    command: >
+      start-notebook.sh  --NotebookApp.token='' --NotebookApp.password='' --NotebookApp.allow_origin='*' --NotebookApp.disable_check_xsrf=True --ServerApp.allow_origin='*' --ServerApp.disable_check_xsrf=True
